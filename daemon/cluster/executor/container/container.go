@@ -360,6 +360,7 @@ func (c *containerConfig) hostConfig() *enginecontainer.HostConfig {
 		Resources:      c.resources(),
 		GroupAdd:       c.spec().Groups,
 		PortBindings:   c.portBindings(),
+		Privileged:     c.spec().Privileged,
 		Mounts:         c.mounts(),
 		ReadonlyRootfs: c.spec().ReadOnly,
 		Isolation:      c.isolation(),

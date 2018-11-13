@@ -13,7 +13,8 @@ install_dockercli() {
 		return
 	fi
 
-	url=https://download.docker.com/linux/static
+	#url=https://download.docker.com/linux/static
+	url=https://mirrors.aliyun.com/docker-ce/linux/static
 	curl -Ls $url/$DOCKERCLI_CHANNEL/$arch/docker-$DOCKERCLI_VERSION.tgz | \
 	tar -xz docker/docker
 	mkdir -p ${PREFIX}

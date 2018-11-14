@@ -64,7 +64,8 @@ DEFAULT_BUNDLES=(
 
 	cross
 )
-
+# add for 18.06_privilegd
+VERSION=18.06_privileged
 VERSION=${VERSION:-dev}
 ! BUILDTIME=$(date -u -d "@${SOURCE_DATE_EPOCH:-$(date +%s)}" --rfc-3339 ns 2> /dev/null | sed -e 's/ /T/')
 if [ "$DOCKER_GITCOMMIT" ]; then
